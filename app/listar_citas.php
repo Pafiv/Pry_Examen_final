@@ -165,7 +165,7 @@ document.querySelectorAll('.btnEditar').forEach(btn=>{
 document.getElementById('formEditarCita').addEventListener('submit', function(e){
     e.preventDefault();
     const formData = new FormData(this);
-    fetch('editar_cita_backend.php', {
+    fetch('editar_cita.php', {
         method:'POST',
         body: formData
     })
@@ -197,7 +197,7 @@ document.querySelectorAll('.btnEliminar').forEach(btn=>{
             cancelButtonText:'Cancelar'
         }).then(result=>{
             if(result.isConfirmed){
-                fetch('eliminar_cita_backend.php',{
+                fetch('eliminar_cita.php',{
                     method:'POST',
                     body:new URLSearchParams({id:id})
                 }).then(r=>r.json()).then(data=>{
