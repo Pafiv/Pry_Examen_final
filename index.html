@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas Médicas - CLINICA CENTRAL RIO</title>
+    <link href="./public/lib/bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .card-header {
+            border-radius: 15px 15px 0 0 !important;
+            background: linear-gradient(45deg, #2c5aa0, #3498db);
+            color: white;
+            border: none;
+        }
+        .btn-custom {
+            background: linear-gradient(45deg, #2c5aa0, #3498db);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #1e3d72, #2980b9);
+            transform: translateY(-2px);
+            color: white;
+        }
+        .header-title {
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .module-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        .footer {
+            background: rgba(0,0,0,0.1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header-title">
+            <h1 class="display-4 fw-bold">
+                <i class="fas fa-hospital-alt me-3"></i>
+                CLINICA CENTRAL RIO
+            </h1>
+            <p class="lead">Sistema de Gestión de Citas Médicas</p>
+        </div>
+        
+        <div class="container">
+            <div class="row g-4">
+                <!-- Gestión de Pacientes -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-users me-2"></i>
+                                Gestión de Pacientes
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-injured module-icon"></i>
+                            <p class="card-text">
+                                Registrar, editar y consultar información de pacientes. 
+                                Mantén actualizada la base de datos de pacientes de la clínica.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="./app/pacientes.php" class="btn btn-custom">
+                                    <i class="fas fa-plus me-2"></i>Gestionar Pacientes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestión de Médicos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-user-md me-2"></i>
+                                Gestión de Médicos
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <i class="fas fa-stethoscope module-icon"></i>
+                            <p class="card-text">
+                                Administrar información de médicos, especialidades y tarifas. 
+                                Control completo del equipo médico.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="./app/medicos.php" class="btn btn-custom">
+                                    <i class="fas fa-plus me-2"></i>Gestionar Médicos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestión de Citas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-calendar-alt me-2"></i>
+                                Gestión de Citas
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <i class="fas fa-calendar-check module-icon"></i>
+                            <p class="card-text">
+                                Programar, editar y consultar citas médicas. 
+                                Cálculo automático de duración y costos.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="./app/citas.php" class="btn btn-custom">
+                                    <i class="fas fa-plus me-2"></i>Gestionar Citas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard/Reportes -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-chart-bar me-2"></i>
+                                Dashboard
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <i class="fas fa-tachometer-alt module-icon"></i>
+                            <p class="card-text">
+                                Vista general del sistema con estadísticas y resumen de actividades.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="dashboard.php" class="btn btn-custom">
+                                    <i class="fas fa-eye me-2"></i>Ver Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Base de Datos -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header text-center">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-database me-2"></i>
+                                Configuración
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <i class="fas fa-cog module-icon"></i>
+                            <p class="card-text">
+                                Configuración de la base de datos y parámetros del sistema.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="./app/db.php" class="btn btn-custom">
+                                    <i class="fas fa-wrench me-2"></i>Conexion a Base de Datos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="mb-0">
+                <i class="fas fa-heart text-danger me-2"></i>
+                Sistema de Citas Médicas - CLINICA CENTRAL RIO &copy; 2024
+                <i class="fas fa-heart text-danger ms-2 me-2"></i>
+            </p>
+            <small>Desarrollado para mejorar la gestión de citas médicas</small>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
