@@ -51,7 +51,7 @@ $medicos = $pdo->query("SELECT id, nombre, tarifa_por_hora FROM medicos")->fetch
             <input type="time" name="hora_fin" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Registrar Cita</button>
-        <a href="./listar_citas.php" class="btn btn-secondary">
+        <a href="./listar_citas.php" class="btn btn-info">
         <i class="fas fa-arrow-left"></i> Ver a la Lista</a>
                      <a href="../index.html" class="btn btn-secondary ">
                                 <i class="fas fa-home"></i> Volver al Inicio

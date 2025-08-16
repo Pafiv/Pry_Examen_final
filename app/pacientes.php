@@ -43,7 +43,7 @@
                                 <i class="fas fa-save"></i> 
                                 Guardar Paciente
                             </button>
-                            <a href="listar.php" class="btn btn-secondary">
+                            <a href="listar.php" class="btn btn-info">
                                 <i class="fas fa-arrow-left"></i> Ver a la Lista
                             </a>
                             <a href="index.html" class="btn btn-secondary ">

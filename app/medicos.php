@@ -37,7 +37,7 @@
                                 <i class="fas fa-save"></i> 
                                 Guardar Médico
                             </button>
-                            <a href="listarMedicos.php" class="btn btn-secondary">
+                            <a href="listarMedicos.php" class="btn btn-info">
                                 <i class="fas fa-arrow-left"></i> Ver Lista de Médicos
                             </a>
                             <a href="index.html" class="btn btn-secondary">
