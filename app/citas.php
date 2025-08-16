@@ -71,6 +71,42 @@ document.getElementById('formCita').addEventListener('submit', function(e){
 });
 </script>
 <script src="../public/lib/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('formCita').addEventListener('submit', function(e){
+    e.preventDefault(); // Prevenir envío inmediato
+
+    const fecha = this.fecha.value;
+    const hoy = new Date().toISOString().split('T')[0];
+
+    if(fecha < hoy){
+        Swal.fire({
+            icon: 'error',
+            title: 'Fecha inválida',
+            text: 'No se puede seleccionar una fecha pasada.'
+        });
+        return;
+    }
+
+    // Confirmación antes de enviar
+    Swal.fire({
+        title: '¿Registrar cita?',
+        text: "Verifica los datos antes de enviar",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, registrar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Enviar formulario
+            this.submit();
+        }
+    });
+});
+</script>
+
     
 </script>
 </body>
